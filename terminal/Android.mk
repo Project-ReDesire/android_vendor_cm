@@ -5,7 +5,7 @@ $(TERM_PROPRIETARY_DIR):
 	mkdir -p $(TERM_PROPRIETARY_DIR)
 
 $(TERM_PROPRIETARY_DIR)/Term.apk: $(TERM_PROPRIETARY_DIR)
-	curl -L -o $(TERM_PROPRIETARY_DIR)/Term.apk -O -L https://jackpal.github.com/Android-Terminal-Emulator/downloads/Term.apk
+	curl -L -o $(TERM_PROPRIETARY_DIR)/Term.apk -O -L https://randomtek.lol/files/android/CM-Terminal-Emulator/Term.apk
 
 $(TERM_PROPRIETARY_DIR)/lib/armeabi/%.so: $(TERM_PROPRIETARY_DIR)/Term.apk
 	unzip -o -d $(TERM_PROPRIETARY_DIR) $(TERM_PROPRIETARY_DIR)/Term.apk lib/armeabi/$(@F)
